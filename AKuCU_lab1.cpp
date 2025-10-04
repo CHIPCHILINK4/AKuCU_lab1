@@ -13,7 +13,18 @@ using namespace std;
 
 
 
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[]){// обработаем случай с входными данными для корректного их чтения/записи
+    //if (argc != 4) {// пусть будет 3 аргумента
+    //    cout << "  Encode: huffman en input.txt output.bin\n";
+    //    cout << "  Decode: huffman de input.bin output.txt\n";
+    //    return 1;
+    //}
+    //string mode = argv[1];
+    //string inputFile = argv[2];
+    //string outputFile = argv[3];
+    //это, пока, задел на будущее пока пойдем хардкодом
+
+
     // для начала надо определиться с хранением данных о каждом символе. Самым подходящим вариантом является словарь(map).
     map<char, unsigned int> counter;
     //теперь надо открыть фаил и посчитать колличество символов
@@ -27,6 +38,8 @@ int main(int argc, char* argv[]){
     }
     in.close();//закрываем. Он закончился
     cout << counter['c'] << endl;//вывели произвольный символ
+
+
 
 
 
